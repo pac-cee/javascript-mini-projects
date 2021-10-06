@@ -61,3 +61,24 @@ class AnalyticsPlatform {
         this.eventProcessor = Container.get(EventProcessor);
         this.metricsAggregator = Container.get(MetricsAggregator);
         this.alertManager = Container.get(AlertManager);
+        this.dashboardManager = Container.get(DashboardManager);
+
+        // Initialize services
+        await Promise.all([
+            this.eventProcessor.initialize(),
+            this.metricsAggregator.initialize(),
+            this.alertManager.initialize(),
+            this.dashboardManager.initialize()
+        ]);
+    }
+
+    private setupMiddleware() {
+        this.app.use(express.json());
+        this.app.use(express.urlencoded({ extended: true }));
+        
+        // Setup bull-board
+        const { router } = createBullBoard([
+            new BullAdapter(this.eventProcessor.queue)
+        ]);
+        this.app.use('/admin/queues', router);
+    }
