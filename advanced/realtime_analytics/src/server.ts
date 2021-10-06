@@ -40,3 +40,24 @@ class AnalyticsPlatform {
         this.prisma = new PrismaClient();
         this.setupDependencies();
         this.setupMiddleware();
+        this.setupRoutes();
+        this.setupWebSockets();
+        this.setupQueues();
+    }
+
+    private async setupDependencies() {
+        // Setup Kafka
+        this.kafka = new Kafka({
+            clientId: 'analytics-platform',
+            brokers: ['localhost:9092']
+        });
+
+        // Setup Redis
+        const redis = createClient({
+            url: process.env.REDIS_URL
+        });
+
+        // Setup services
+        this.eventProcessor = Container.get(EventProcessor);
+        this.metricsAggregator = Container.get(MetricsAggregator);
+        this.alertManager = Container.get(AlertManager);
