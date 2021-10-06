@@ -19,3 +19,24 @@ import { createBullBoard } from '@bull-board/api';
 import { BullAdapter } from '@bull-board/api/bullAdapter';
 import Queue from 'bull';
 
+import { EventProcessor } from './services/EventProcessor';
+import { MetricsAggregator } from './services/MetricsAggregator';
+import { AlertManager } from './services/AlertManager';
+import { DashboardManager } from './services/DashboardManager';
+import { logger } from './utils/logger';
+
+class AnalyticsPlatform {
+    private app: express.Application;
+    private io: Server;
+    private prisma: PrismaClient;
+    private kafka: Kafka;
+    private eventProcessor: EventProcessor;
+    private metricsAggregator: MetricsAggregator;
+    private alertManager: AlertManager;
+    private dashboardManager: DashboardManager;
+
+    constructor() {
+        this.app = express();
+        this.prisma = new PrismaClient();
+        this.setupDependencies();
+        this.setupMiddleware();
