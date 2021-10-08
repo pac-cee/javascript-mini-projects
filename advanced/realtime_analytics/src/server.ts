@@ -82,3 +82,24 @@ class AnalyticsPlatform {
         ]);
         this.app.use('/admin/queues', router);
     }
+
+    private setupRoutes() {
+        useExpressServer(this.app, {
+            controllers: [__dirname + '/controllers/*.ts'],
+            middlewares: [__dirname + '/middlewares/*.ts'],
+            interceptors: [__dirname + '/interceptors/*.ts']
+        });
+    }
+
+    private setupWebSockets() {
+        this.io = new Server(this.app.listen(3000));
+        
+        this.io.on('connection', (socket) => {
+            logger.info(`Client connected: ${socket.id}`);
+            
+            socket.on('subscribe', (dashboardId: string) => {
+                this.dashboardManager.subscribeToDashboard(socket, dashboardId);
+            });
+            
+            socket.on('disconnect', () => {
+                this.dashboardManager.handleDisconnect(socket);
