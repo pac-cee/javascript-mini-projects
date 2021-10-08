@@ -103,3 +103,24 @@ class AnalyticsPlatform {
             
             socket.on('disconnect', () => {
                 this.dashboardManager.handleDisconnect(socket);
+            });
+        });
+    }
+
+    private setupQueues() {
+        // Event processing queue
+        const eventQueue = new Queue('event-processing', {
+            redis: process.env.REDIS_URL
+        });
+
+        eventQueue.process(async (job) => {
+            await this.eventProcessor.processEvent(job.data);
+        });
+
+        // Metrics aggregation queue
+        const metricsQueue = new Queue('metrics-aggregation', {
+            redis: process.env.REDIS_URL
+        });
+
+        metricsQueue.process(async (job) => {
+            await this.metricsAggregator.aggregateMetrics(job.data);
