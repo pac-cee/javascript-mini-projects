@@ -124,3 +124,24 @@ class AnalyticsPlatform {
 
         metricsQueue.process(async (job) => {
             await this.metricsAggregator.aggregateMetrics(job.data);
+        });
+    }
+
+    public async start() {
+        try {
+            await this.prisma.$connect();
+            logger.info('Connected to database');
+            
+            const port = process.env.PORT || 3000;
+            this.app.listen(port, () => {
+                logger.info(`Server running on port ${port}`);
+            });
+        } catch (error) {
+            logger.error('Failed to start server:', error);
+            process.exit(1);
+        }
+    }
+}
+
+const platform = new AnalyticsPlatform();
+platform.start(); 
