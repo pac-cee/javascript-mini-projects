@@ -19,3 +19,10 @@ const fileFilter = (req, file, cb) => {
         return cb(null, true);
     }
     cb(new Error('Invalid file type'));
+};
+
+module.exports = multer({
+    storage,
+    fileFilter,
+    limits: { fileSize: 5 * 1024 * 1024 } // 5MB limit
+}); 
