@@ -61,3 +61,24 @@ exports.getNote = async (req, res) => {
 
         if (!note) {
             return res.status(404).json({ error: 'Note not found' });
+        }
+
+        res.json(note);
+    } catch (error) {
+        res.status(500).json({ error: 'Server error' });
+    }
+};
+
+exports.updateNote = async (req, res) => {
+    try {
+        const note = await Note.findOneAndUpdate(
+            { _id: req.params.id, owner: req.user._id },
+            req.body,
+            { new: true, runValidators: true }
+        );
+
+        if (!note) {
+            return res.status(404).json({ error: 'Note not found' });
+        }
+
+        res.json(note);
