@@ -40,3 +40,24 @@ exports.getNotes = async (req, res) => {
             const parts = req.query.sortBy.split(':');
             sort[parts[0]] = parts[1] === 'desc' ? -1 : 1;
         }
+
+        const notes = await Note.find({ 
+            ...match,
+            owner: req.user._id 
+        }).sort(sort);
+
+        res.json(notes);
+    } catch (error) {
+        res.status(500).json({ error: 'Server error' });
+    }
+};
+
+exports.getNote = async (req, res) => {
+    try {
+        const note = await Note.findOne({ 
+            _id: req.params.id,
+            owner: req.user._id
+        });
+
+        if (!note) {
+            return res.status(404).json({ error: 'Note not found' });
