@@ -19,3 +19,24 @@ beforeAll(async () => {
             password: 'password123'
         });
     
+    token = response.body.token;
+});
+
+describe('Note API Tests', () => {
+    test('Should create new note', async () => {
+        const response = await request(app)
+            .post('/api/notes')
+            .set('Authorization', `Bearer ${token}`)
+            .send({
+                title: 'Test Note',
+                content: 'Test Content',
+                category: 'Test'
+            });
+
+        expect(response.status).toBe(201);
+        expect(response.body.title).toBe('Test Note');
+    });
+
+    test('Should get all notes', async () => {
+        const response = await request(app)
+            .get('/api/notes')
