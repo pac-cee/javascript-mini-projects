@@ -40,3 +40,13 @@ describe('Note API Tests', () => {
     test('Should get all notes', async () => {
         const response = await request(app)
             .get('/api/notes')
+            .set('Authorization', `Bearer ${token}`);
+
+        expect(response.status).toBe(200);
+        expect(Array.isArray(response.body)).toBeTruthy();
+    });
+});
+
+afterAll(async () => {
+    await mongoose.connection.close();
+}); 
