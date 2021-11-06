@@ -19,3 +19,15 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/counter" element={<Counter />} />
             <Route path="/todo" element={<TodoList />} />
+            <Route path="/profile" element={<UserProfile />} />
+            <Route path="/data-fetching" element={<DataFetching />} />
+            <Route path="/redux-example" element={<ReduxExample />} />
+            <Route path="/context-example" element={<ContextExample />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
+  );
+}
+
+export default App;
