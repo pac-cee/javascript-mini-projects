@@ -61,3 +61,11 @@ const ContextExample = () => {
         }
         label="Dark Mode"
         sx={{ mb: 2 }}
+      />
+
+      <ThemedComponent />
+    </Paper>
+  );
+};
+
+export default ContextExample;
