@@ -19,3 +19,27 @@ const Counter = () => {
       <Typography variant="body1" gutterBottom>
         This is a basic example demonstrating:
         <ul>
+          <li>useState Hook</li>
+          <li>Event Handling</li>
+          <li>Component Organization</li>
+        </ul>
+      </Typography>
+
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, my: 3 }}>
+        <Button variant="contained" color="primary" onClick={decrement}>
+          -
+        </Button>
+        <Typography variant="h5">{count}</Typography>
+        <Button variant="contained" color="primary" onClick={increment}>
+          +
+        </Button>
+      </Box>
+
+      <Button variant="outlined" onClick={reset}>
+        Reset
+      </Button>
+    </Paper>
+  );
+};
+
+export default Counter;
