@@ -40,3 +40,24 @@ const DataFetching = () => {
     post.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  return (
+    <Paper elevation={3} sx={{ p: 3, m: 2 }}>
+      <Typography variant="h4" gutterBottom>
+        Data Fetching Example
+      </Typography>
+
+      <Typography variant="body1" gutterBottom>
+        This example demonstrates:
+        <ul>
+          <li>API integration with fetch</li>
+          <li>Loading states</li>
+          <li>Error handling</li>
+          <li>Search functionality</li>
+          <li>useEffect for data fetching</li>
+        </ul>
+      </Typography>
+
+      <TextField
+        fullWidth
+        variant="outlined"
+        label="Search posts"
