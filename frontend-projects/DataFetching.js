@@ -82,3 +82,27 @@ const DataFetching = () => {
                 <CardContent>
                   <Typography variant="h6" gutterBottom>
                     {post.title}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {post.body}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      )}
+
+      <Button
+        variant="contained"
+        onClick={fetchPosts}
+        sx={{ mt: 2 }}
+        disabled={loading}
+      >
+        Refresh Posts
+      </Button>
+    </Paper>
+  );
+};
+
+export default DataFetching;
