@@ -19,3 +19,24 @@ This roadmap provides a carefully curated sequence of projects that build upon e
 - **Deployment**: GitHub Pages
 - **Duration**: 1-2 weeks
 
+#### 2. Restaurant Menu Page
+- **Skills**: Advanced CSS, CSS Variables, Transitions
+- **Focus**: Creating an interactive menu with filtering options
+- **Key Concepts**:
+  - CSS preprocessors (SASS)
+  - CSS custom properties
+  - Transitions and transforms
+  - CSS Grid for menu layouts
+- **Deployment**: Netlify
+- **Duration**: 1-2 weeks
+
+### Level 2: JavaScript Fundamentals
+
+#### 3. Task Management Application
+- **Skills**: Vanilla JavaScript, DOM manipulation, Local Storage
+- **Focus**: Building a CRUD application
+- **Key Concepts**:
+  - Event handling
+  - Local Storage API
+  - Form validation
+  - ES6+ features
