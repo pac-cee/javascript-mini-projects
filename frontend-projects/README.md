@@ -82,3 +82,24 @@ This roadmap provides a carefully curated sequence of projects that build upon e
 
 #### 7. Real-time Chat Application (Vue)
 - **Skills**: Vue.js, Real-time data, WebSockets
+- **Focus**: Real-time applications and state management
+- **Key Concepts**:
+  - Vue 3 Composition API
+  - WebSocket integration
+  - State management with Pinia
+  - Authentication
+- **Tools**: Vite, Socket.io, Firebase
+- **Duration**: 4-5 weeks
+
+### Level 5: Professional Development
+
+#### 8. Full-Stack Blog Platform
+- **Skills**: Full-stack integration, Testing, CI/CD
+- **Focus**: Professional development practices
+- **Key Concepts**:
+  - REST API integration
+  - Unit and Integration testing
+  - CI/CD pipelines
+  - Performance optimization
+- **Tools**: Jest, React Testing Library, GitHub Actions
+- **Duration**: 6-8 weeks
