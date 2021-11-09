@@ -40,3 +40,13 @@
     ],
     "development": [
       "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "description": "This project is designed to help you learn React from beginner to advanced level through practical, real-world examples. Each section builds upon the previous one, introducing new concepts progressively.",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
