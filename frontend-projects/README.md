@@ -40,3 +40,24 @@ This roadmap provides a carefully curated sequence of projects that build upon e
   - Local Storage API
   - Form validation
   - ES6+ features
+- **Tools**: ESLint
+- **Duration**: 2-3 weeks
+
+#### 4. Weather Dashboard
+- **Skills**: APIs, Async JavaScript, Error Handling
+- **Focus**: Working with external APIs and data
+- **Key Concepts**:
+  - Fetch API
+  - Async/Await
+  - API error handling
+  - Data visualization with Chart.js
+- **Tools**: Axios, Chart.js
+- **Duration**: 2-3 weeks
+
+### Level 3: Modern Development Tools
+
+#### 5. E-commerce Product Page
+- **Skills**: Module bundlers, Package managers, Build tools
+- **Focus**: Modern development workflow
+- **Key Concepts**:
+  - Webpack configuration
