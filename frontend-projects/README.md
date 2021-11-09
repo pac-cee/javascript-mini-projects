@@ -103,3 +103,24 @@ This roadmap provides a carefully curated sequence of projects that build upon e
   - Performance optimization
 - **Tools**: Jest, React Testing Library, GitHub Actions
 - **Duration**: 6-8 weeks
+
+#### 9. E-commerce Platform
+- **Skills**: Advanced state management, Performance, SEO
+- **Focus**: Large-scale application development
+- **Key Concepts**:
+  - Advanced React patterns
+  - Redux Toolkit/Query
+  - Code splitting
+  - SEO optimization
+  - Accessibility (WCAG)
+- **Tools**: Next.js, Redux Toolkit, Stripe
+- **Duration**: 8-10 weeks
+
+## 🛠 Essential Tools Across All Levels
+
+### Version Control
+- Git
+- GitHub
+
+### Development Environment
+- VS Code
