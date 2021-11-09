@@ -124,3 +124,24 @@ This roadmap provides a carefully curated sequence of projects that build upon e
 
 ### Development Environment
 - VS Code
+- Essential VS Code extensions
+- Chrome DevTools
+
+### Package Management
+- npm/yarn
+- package.json configuration
+
+### Build Tools
+- Webpack
+- Vite
+- Babel
+
+### Testing
+- Jest
+- React Testing Library
+- Cypress
+
+### Deployment Platforms
+- GitHub Pages
+- Netlify
+- Vercel
