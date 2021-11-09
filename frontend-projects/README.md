@@ -61,3 +61,24 @@ This roadmap provides a carefully curated sequence of projects that build upon e
 - **Focus**: Modern development workflow
 - **Key Concepts**:
   - Webpack configuration
+  - npm package management
+  - CSS Modules
+  - Git workflow
+- **Tools**: Webpack, npm, Git
+- **Duration**: 3-4 weeks
+
+### Level 4: Frontend Frameworks
+
+#### 6. Social Media Dashboard (React)
+- **Skills**: React.js, State Management, Component Design
+- **Focus**: Building complex UIs with React
+- **Key Concepts**:
+  - React hooks
+  - Context API
+  - Component composition
+  - React Router
+- **Tools**: Create React App, Redux Toolkit
+- **Duration**: 4-5 weeks
+
+#### 7. Real-time Chat Application (Vue)
+- **Skills**: Vue.js, Real-time data, WebSockets
