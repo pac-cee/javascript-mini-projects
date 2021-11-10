@@ -61,3 +61,13 @@ npm start
 - `npm start`: Runs the app in development mode
 - `npm test`: Launches the test runner
 - `npm run build`: Builds the app for production
+- `npm run eject`: Ejects from Create React App
+
+## Dependencies
+
+- React 18.x
+- React Router 6.x
+- Redux Toolkit
+- Axios
+- Material-UI
+- React Testing Library
