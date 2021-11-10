@@ -19,3 +19,17 @@ export const ThemeProvider = ({ children }) => {
 
   const theme = {
     darkMode,
+    toggleTheme,
+    colors: {
+      background: darkMode ? '#333' : '#fff',
+      text: darkMode ? '#fff' : '#333',
+      primary: '#1976d2',
+    },
+  };
+
+  return (
+    <ThemeContext.Provider value={theme}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
