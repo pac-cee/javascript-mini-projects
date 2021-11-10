@@ -40,3 +40,24 @@ react-learning-path/
 - Redux State Management
 - Custom Hooks
 - Performance Optimization
+- Testing
+- Authentication
+- API Integration
+
+## Getting Started
+
+1. Clone this repository
+2. Install dependencies:
+```bash
+npm install
+```
+3. Start the development server:
+```bash
+npm start
+```
+
+## Available Scripts
+
+- `npm start`: Runs the app in development mode
+- `npm test`: Launches the test runner
+- `npm run build`: Builds the app for production
