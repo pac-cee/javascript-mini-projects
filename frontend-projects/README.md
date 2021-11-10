@@ -145,3 +145,24 @@ This roadmap provides a carefully curated sequence of projects that build upon e
 - GitHub Pages
 - Netlify
 - Vercel
+- Firebase Hosting
+
+## 📈 Learning Tips
+1. Complete each project thoroughly before moving to the next
+2. Write clean, documented code from the start
+3. Use Git for version control from day one
+4. Deploy each project, no matter how small
+5. Add projects to your GitHub portfolio
+6. Get code reviews when possible
+7. Focus on responsive design and accessibility in every project
+
+## 🎓 Additional Resources
+- MDN Web Docs
+- Frontend Masters
+- CSS-Tricks
+- web.dev
+- JavaScript.info
+
+## 🚀 Next Steps
+After completing these projects, consider:
+1. Contributing to open-source projects
