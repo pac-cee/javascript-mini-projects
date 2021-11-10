@@ -166,3 +166,11 @@ This roadmap provides a carefully curated sequence of projects that build upon e
 ## 🚀 Next Steps
 After completing these projects, consider:
 1. Contributing to open-source projects
+2. Building your own complex applications
+3. Learning backend technologies
+4. Exploring TypeScript
+5. Studying system design and architecture
+
+---
+
+Remember: The best way to learn is by doing. Each project should be treated as a real-world application, following best practices and professional development standards.
