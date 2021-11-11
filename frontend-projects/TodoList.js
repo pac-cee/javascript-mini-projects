@@ -40,3 +40,24 @@ const TodoList = () => {
       return;
     }
 
+    setTodos([
+      ...todos,
+      {
+        id: Date.now(),
+        text: newTodo,
+        completed: false,
+      },
+    ]);
+    setNewTodo('');
+    setError('');
+  };
+
+  const toggleTodo = (id) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
+    );
+  };
+
+  const deleteTodo = (id) => {
