@@ -61,3 +61,24 @@ const TodoList = () => {
   };
 
   const deleteTodo = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
+
+  return (
+    <Paper elevation={3} sx={{ p: 3, m: 2 }}>
+      <Typography variant="h4" gutterBottom>
+        Todo List
+      </Typography>
+
+      <Typography variant="body1" gutterBottom>
+        This example demonstrates:
+        <ul>
+          <li>Form handling</li>
+          <li>Multiple state variables</li>
+          <li>useEffect for side effects</li>
+          <li>Local storage integration</li>
+          <li>List rendering with keys</li>
+          <li>Conditional rendering</li>
+        </ul>
+      </Typography>
+
