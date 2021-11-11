@@ -19,3 +19,24 @@ const TodoList = () => {
   const [newTodo, setNewTodo] = useState('');
   const [error, setError] = useState('');
 
+  // Load todos from localStorage on component mount
+  useEffect(() => {
+    const savedTodos = localStorage.getItem('todos');
+    if (savedTodos) {
+      setTodos(JSON.parse(savedTodos));
+    }
+  }, []);
+
+  // Save todos to localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    if (!newTodo.trim()) {
+      setError('Todo cannot be empty');
+      return;
+    }
+
