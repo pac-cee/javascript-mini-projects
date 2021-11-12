@@ -82,3 +82,24 @@ const TodoList = () => {
         </ul>
       </Typography>
 
+      <form onSubmit={handleSubmit} style={{ marginBottom: '20px' }}>
+        <TextField
+          fullWidth
+          variant="outlined"
+          value={newTodo}
+          onChange={(e) => setNewTodo(e.target.value)}
+          placeholder="Add a new todo"
+          error={!!error}
+          helperText={error}
+          sx={{ mb: 2 }}
+        />
+        <Button variant="contained" color="primary" type="submit">
+          Add Todo
+        </Button>
+      </form>
+
+      <List>
+        {todos.map((todo) => (
+          <ListItem key={todo.id} dense>
+            <Checkbox
+              edge="start"
