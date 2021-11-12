@@ -103,3 +103,25 @@ const TodoList = () => {
           <ListItem key={todo.id} dense>
             <Checkbox
               edge="start"
+              checked={todo.completed}
+              onChange={() => toggleTodo(todo.id)}
+            />
+            <ListItemText
+              primary={todo.text}
+              sx={{
+                textDecoration: todo.completed ? 'line-through' : 'none',
+              }}
+            />
+            <ListItemSecondaryAction>
+              <IconButton edge="end" onClick={() => deleteTodo(todo.id)}>
+                <DeleteIcon />
+              </IconButton>
+            </ListItemSecondaryAction>
+          </ListItem>
+        ))}
+      </List>
+    </Paper>
+  );
+};
+
+export default TodoList;
